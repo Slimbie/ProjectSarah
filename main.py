@@ -5,12 +5,16 @@ from skills.time_skill import TimeSkill
 from tts.speaker import Speaker
 from skills.llm_skill import LlmSkill
 from skills.app_skill import AppSkill
+from skills.search_skill import SearchSkill
+from skills.media_skill import MediaSkill
+
+
 
 
 def main():
     listener = WakeWordListener(wakeword="hey_jarvis")
     transcriber = Transcriber()
-    orchestrator = Orchestrator(skills=[TimeSkill(), AppSkill(), LlmSkill()])
+    orchestrator = Orchestrator(skills=[TimeSkill(), AppSkill(), MediaSkill(), SearchSkill(), LlmSkill()])
     speaker = Speaker()
     
     
@@ -23,6 +27,7 @@ def main():
         text = transcriber.transcribe()
         if not text:
             print("Niks verstaan, terug naar luisteren.")
+            speaker.speak("I didn't hear you.")
             continue
 
         print(f"Jij zei: {text}")
