@@ -62,5 +62,29 @@
   {
     "role": "assistant",
     "content": "Sonny, I'm a voice assistant, I don't have the ability to play music or video, and I definitely won't be distracting you from AC/DC. I can provide information about the band, such as their history or discography, if you'd like."
+  },
+  {
+    "role": "user",
+    "content": "Set the timer for 10 seconds"
+  },
+  {
+    "role": "assistant",
+    "content": "Sonny, I'm a text-to-speech system, I don't have the ability to set timers or perform any time-related tasks."
+  },
+  {
+    "role": "user",
+    "content": "Can you put an alarm up for 11 pm"
+  },
+  {
+    "role": "assistant",
+    "content": "Sonny, I'm a voice assistant, I don't have the ability to set alarms or perform any time-related tasks."
+  },
+  {
+    "role": "user",
+    "content": "Simer on for 10 minutes"
+  },
+  {
+    "role": "assistant",
+    "content": "Sonny, I'm a text-to-speech system, I don't have the ability to simulate a phone call or speaker, and I definitely won't be able to set a timer or schedule an alarm."
   }
 ]

@@ -1,23 +1,31 @@
 from wake_word.listener import WakeWordListener
 from stt.transcriber import Transcriber
 from orchestrator.router import Orchestrator
-from skills.time_skill import TimeSkill
 from tts.speaker import Speaker
-from skills.llm_skill import LlmSkill
+from skills.time_skill import TimeSkill
 from skills.app_skill import AppSkill
-from skills.search_skill import SearchSkill
 from skills.media_skill import MediaSkill
-
-
+from skills.timer_skill import TimerSkill
+from skills.search_skill import SearchSkill
+from skills.llm_skill import LlmSkill
+from skills.alarm_skill import AlarmSkill
 
 
 def main():
     listener = WakeWordListener(wakeword="hey_jarvis")
     transcriber = Transcriber()
-    orchestrator = Orchestrator(skills=[TimeSkill(), AppSkill(), MediaSkill(), SearchSkill(), LlmSkill()])
     speaker = Speaker()
-    
-    
+
+    orchestrator = Orchestrator(skills=[
+    TimeSkill(),
+    AppSkill(),
+    MediaSkill(),
+    TimerSkill(speaker),
+    AlarmSkill(speaker),
+    SearchSkill(),
+    LlmSkill(),
+    ])
+
     print("Sarah is actief en luistert op de achtergrond... (Ctrl+C om te stoppen)")
 
     while True:
