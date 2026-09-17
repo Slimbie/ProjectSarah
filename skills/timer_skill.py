@@ -1,7 +1,19 @@
 import re
+import time
 import threading
+import numpy as np
+import sounddevice as sd
 import tkinter as tk
 from skills.base_skill import BaseSkill
+
+
+def play_alert_beep(frequency: float = 1000, duration: float = 0.3):
+    """Één luide piep, duidelijk hoorbaarder dan de zachte STT-bevestigingspiep."""
+    sample_rate = 16000
+    t = np.linspace(0, duration, int(sample_rate * duration), False)
+    tone = 0.9 * np.sin(2 * np.pi * frequency * t)
+    sd.play(tone, sample_rate)
+    sd.wait()
 
 
 class TimerSkill(BaseSkill):
@@ -12,7 +24,7 @@ class TimerSkill(BaseSkill):
     """
 
     PATTERN = re.compile(r"timer for (\d+)\s*(second|seconds|minute|minutes|hour|hours)")
-    
+
     def __init__(self, speaker):
         self.speaker = speaker
 
@@ -45,17 +57,18 @@ class TimerSkill(BaseSkill):
 class CountdownWindow:
     """
     Generiek aftel-schermpje met pauze- en annuleerknop. Wordt gebruikt
-    door zowel TimerSkill als AlarmSkill - kent zelf geen verschil tussen
-    de twee, krijgt gewoon een aantal seconden en een boodschap mee.
+    door zowel TimerSkill als AlarmSkill.
     """
 
-    def __init__(self, seconds, title, done_message, speaker):
+    def __init__(self, seconds, title, done_message, speaker, repeats: int = 4, repeat_gap: float = 1.5):
         self.remaining = seconds
         self.title = title
         self.done_message = done_message
         self.speaker = speaker
         self.paused = False
         self.cancelled = False
+        self.repeats = repeats
+        self.repeat_gap = repeat_gap
 
     def run(self):
         self.root = tk.Tk()
@@ -102,8 +115,20 @@ class CountdownWindow:
             self.label.config(text=self._format_time())
             if self.remaining <= 0:
                 self.root.destroy()
-                self.speaker.speak(self.done_message)
+                self._announce_done()
                 return
             self.remaining -= 1
 
         self.root.after(1000, self._tick)
+
+    def _announce_done(self):
+        banner = "=" * 44
+        print(f"\n{banner}\n⏰  {self.done_message}\n{banner}\n")
+
+        for i in range(self.repeats):
+            if self.cancelled:
+                break
+            play_alert_beep()
+            self.speaker.speak(self.done_message)
+            if i < self.repeats - 1:
+                time.sleep(self.repeat_gap)

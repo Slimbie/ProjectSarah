@@ -2,6 +2,7 @@ import re
 import yt_dlp
 from skills.base_skill import BaseSkill
 from skills.browser_utils import open_incognito
+from skills.browser_utils import open_incognito, open_normal
 
 
 class MediaSkill(BaseSkill):
@@ -24,7 +25,7 @@ class MediaSkill(BaseSkill):
         text_lower = text.lower()
 
         if "youtube" in text_lower and "open" in text_lower:
-            open_incognito("https://www.youtube.com")
+            open_normal("https://www.youtube.com")
             return "Opening YouTube."
 
         match = re.search(r"\bplay (.+)", text_lower)

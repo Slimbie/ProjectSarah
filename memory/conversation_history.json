@@ -86,5 +86,45 @@
   {
     "role": "assistant",
     "content": "Sonny, I'm a text-to-speech system, I don't have the ability to simulate a phone call or speaker, and I definitely won't be able to set a timer or schedule an alarm."
+  },
+  {
+    "role": "user",
+    "content": "Put the timer on for 20 minutes"
+  },
+  {
+    "role": "assistant",
+    "content": "Sonny, I'm a voice assistant, I don't have the ability to set timers or perform any time-related tasks."
+  },
+  {
+    "role": "user",
+    "content": "Time for 20 minutes"
+  },
+  {
+    "role": "assistant",
+    "content": "I'm not aware of any way to put the system on time for 20 minutes."
+  },
+  {
+    "role": "user",
+    "content": "Time more for 20 minutes"
+  },
+  {
+    "role": "assistant",
+    "content": "I can show you the current date and time on your device."
+  },
+  {
+    "role": "user",
+    "content": "Blay then they're struck"
+  },
+  {
+    "role": "assistant",
+    "content": "\"Today is Saturday, March 17th, 2023.\""
+  },
+  {
+    "role": "user",
+    "content": "How long does it take to boil an egg"
+  },
+  {
+    "role": "assistant",
+    "content": "To boil an egg, follow these steps: place the egg in a single layer at the bottom of a saucepan, add cold water to cover, bring to a boil, then turn off the heat and let sit for 6-7 minutes, then rinse with cold water."
   }
 ]

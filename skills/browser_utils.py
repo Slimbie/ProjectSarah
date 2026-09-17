@@ -5,11 +5,7 @@ CHROME_CANDIDATES = ["google-chrome", "google-chrome-stable", "chromium", "chrom
 
 
 def open_incognito(url: str, browser: str = "chrome"):
-    """
-    Opent een URL in een incognito/private venster. Probeert een paar
-    mogelijke commandonamen voor Chrome/Chromium, valt terug op de
-    standaardbrowser als niks daarvan gevonden wordt.
-    """
+    """Opent een URL in een incognito/private venster."""
     if browser == "chrome":
         for candidate in CHROME_CANDIDATES:
             try:
@@ -17,11 +13,25 @@ def open_incognito(url: str, browser: str = "chrome"):
                 return
             except FileNotFoundError:
                 continue
-        webbrowser.open(url)  # geen enkele Chrome-variant gevonden
+        webbrowser.open(url)
     elif browser == "firefox":
         try:
             subprocess.Popen(["firefox", "--private-window", url])
         except FileNotFoundError:
             webbrowser.open(url)
+    else:
+        webbrowser.open(url)
+
+
+def open_normal(url: str, browser: str = "chrome"):
+    """Opent een URL gewoon, zonder incognito/private modus."""
+    if browser == "chrome":
+        for candidate in CHROME_CANDIDATES:
+            try:
+                subprocess.Popen([candidate, url])
+                return
+            except FileNotFoundError:
+                continue
+        webbrowser.open(url)
     else:
         webbrowser.open(url)
