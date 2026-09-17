@@ -1,0 +1,22 @@
+[
+  {
+    "text": "a reminder to the dishes",
+    "due_time": "2026-09-20T00:00:00",
+    "notified": false
+  },
+  {
+    "text": "buy a gift next",
+    "due_time": "2026-09-20T00:00:00",
+    "notified": false
+  },
+  {
+    "text": "my clothes later",
+    "due_time": "2026-09-20T00:00:00",
+    "notified": false
+  },
+  {
+    "text": "go to work later this",
+    "due_time": "2027-05-17T00:00:00",
+    "notified": false
+  }
+]

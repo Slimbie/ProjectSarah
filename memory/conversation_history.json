@@ -126,5 +126,13 @@
   {
     "role": "assistant",
     "content": "To boil an egg, follow these steps: place the egg in a single layer at the bottom of a saucepan, add cold water to cover, bring to a boil, then turn off the heat and let sit for 6-7 minutes, then rinse with cold water."
+  },
+  {
+    "role": "user",
+    "content": "to close myself"
+  },
+  {
+    "role": "assistant",
+    "content": "I'm a local voice assistant, I don't have the ability to close myself or shut down the system."
   }
 ]
