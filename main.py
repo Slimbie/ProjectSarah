@@ -12,6 +12,7 @@ from skills.alarm_skill import AlarmSkill
 from skills.reminder_skill import ReminderSkill
 from memory.reminder_checker import ReminderChecker
 from skills.reminder_query_skill import ReminderQuerySkill
+from skills.weather_skill import WeatherSkill
 
 
 
@@ -30,6 +31,7 @@ def main():
     AlarmSkill(speaker),
     ReminderQuerySkill(),
     ReminderSkill(),
+    WeatherSkill(),
     SearchSkill(),
     LlmSkill(),
     ])

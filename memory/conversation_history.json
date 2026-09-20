@@ -134,5 +134,77 @@
   {
     "role": "assistant",
     "content": "I'm a local voice assistant, I don't have the ability to close myself or shut down the system."
+  },
+  {
+    "role": "user",
+    "content": "Hey"
+  },
+  {
+    "role": "assistant",
+    "content": "\"Hello. How can I assist you today?\""
+  },
+  {
+    "role": "user",
+    "content": "I'll buy a gift next"
+  },
+  {
+    "role": "assistant",
+    "content": "I can help you search for gift ideas. Can you give me a general category or idea of what Sonny is looking for?"
+  },
+  {
+    "role": "user",
+    "content": "I am looking for a gift with technology an engineering"
+  },
+  {
+    "role": "assistant",
+    "content": "You can check Sonny's computer for books, tutorials, or online courses on programming, engineering, or technology-related topics."
+  },
+  {
+    "role": "user",
+    "content": "Can you tell me a funny joke"
+  },
+  {
+    "role": "assistant",
+    "content": "Why couldn't the bicycle stand up by itself?"
+  },
+  {
+    "role": "user",
+    "content": "I don't know why couldn't it"
+  },
+  {
+    "role": "assistant",
+    "content": "Because it was two-tired."
+  },
+  {
+    "role": "user",
+    "content": "What's the water"
+  },
+  {
+    "role": "assistant",
+    "content": "Nothing. Just the air."
+  },
+  {
+    "role": "user",
+    "content": "Is it gonna rinse later Should I bring a jacket"
+  },
+  {
+    "role": "assistant",
+    "content": "No, you don't need to bring a jacket."
+  },
+  {
+    "role": "user",
+    "content": "How do you make your tape"
+  },
+  {
+    "role": "assistant",
+    "content": "You can use the tape on your laptop, just peel it off."
+  },
+  {
+    "role": "user",
+    "content": "How do you make an apple pie cake"
+  },
+  {
+    "role": "assistant",
+    "content": "You can look up a recipe online, just type in the ingredients and instructions."
   }
 ]
