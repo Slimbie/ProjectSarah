@@ -230,5 +230,61 @@
   {
     "role": "assistant",
     "content": "I'm a text-based voice assistant, I don't have the capability to open apps or interact with the desktop."
+  },
+  {
+    "role": "user",
+    "content": "Can you give me a number between 1 and 1000"
+  },
+  {
+    "role": "assistant",
+    "content": "I'm a text-based voice assistant, I don't have the capability to generate random numbers or provide numeric data."
+  },
+  {
+    "role": "user",
+    "content": "Can you dim the screen"
+  },
+  {
+    "role": "assistant",
+    "content": "I can display the device's system settings, which include adjusting the display brightness."
+  },
+  {
+    "role": "user",
+    "content": "Can you turn off the volume"
+  },
+  {
+    "role": "assistant",
+    "content": "I don't have the ability to turn off the volume, but I can tell you the current volume settings."
+  },
+  {
+    "role": "user",
+    "content": "Mewd"
+  },
+  {
+    "role": "assistant",
+    "content": "You want to know the current time."
+  },
+  {
+    "role": "user",
+    "content": "Mewd"
+  },
+  {
+    "role": "assistant",
+    "content": "The current date and time is: [redacted]."
+  },
+  {
+    "role": "user",
+    "content": "Take a screen picture"
+  },
+  {
+    "role": "assistant",
+    "content": "I can take a screenshot of the entire screen."
+  },
+  {
+    "role": "user",
+    "content": "Wi-Fi enabled"
+  },
+  {
+    "role": "assistant",
+    "content": "I can show you the list of available Wi-Fi networks."
   }
 ]

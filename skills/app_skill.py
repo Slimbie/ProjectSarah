@@ -31,6 +31,8 @@ class AppSkill(BaseSkill):
         "settings":"Settings",
         "Trash":"Trash",
         "music":"spotify",
+        "weather": "gnome-weather",
+        "weather app": "gnome-weather",
         
     }
 

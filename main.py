@@ -6,38 +6,41 @@ from skills.time_skill import TimeSkill
 from skills.app_skill import AppSkill
 from skills.media_skill import MediaSkill
 from skills.timer_skill import TimerSkill
-from skills.search_skill import SearchSkill
-from skills.llm_skill import LlmSkill
 from skills.alarm_skill import AlarmSkill
-from skills.reminder_skill import ReminderSkill
-from memory.reminder_checker import ReminderChecker
 from skills.reminder_query_skill import ReminderQuerySkill
+from skills.reminder_skill import ReminderSkill
 from skills.weather_skill import WeatherSkill
 from skills.recipe_skill import RecipeSkill
-
+from skills.system_skill import SystemSkill
+from skills.random_skill import RandomSkill
+from skills.search_skill import SearchSkill
+from skills.llm_skill import LlmSkill
+from memory.reminder_checker import ReminderChecker
 
 
 def main():
     listener = WakeWordListener(wakeword="hey_jarvis")
     transcriber = Transcriber()
     speaker = Speaker()
+
     reminder_checker = ReminderChecker(speaker)
     reminder_checker.start()
 
     orchestrator = Orchestrator(skills=[
-    TimeSkill(),
-    AppSkill(),
-    MediaSkill(),
-    TimerSkill(speaker),
-    AlarmSkill(speaker),
-    ReminderQuerySkill(),
-    ReminderSkill(),
-    WeatherSkill(),
-    RecipeSkill(),
-    SearchSkill(),
-    LlmSkill(),
+        TimeSkill(),
+        AppSkill(),
+        MediaSkill(),
+        TimerSkill(speaker),
+        AlarmSkill(speaker),
+        ReminderQuerySkill(),
+        ReminderSkill(),
+        WeatherSkill(),
+        RecipeSkill(),
+        SystemSkill(),
+        RandomSkill(),
+        SearchSkill(),
+        LlmSkill(),
     ])
-
 
     print("Sarah is actief en luistert op de achtergrond... (Ctrl+C om te stoppen)")
 
