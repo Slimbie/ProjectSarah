@@ -1,22 +1,3 @@
 [
-  {
-    "text": "my clothes later",
-    "due_time": "2026-09-20T00:00:00",
-    "notified": true
-  },
-  {
-    "text": "go to work later this",
-    "due_time": "2027-05-17T00:00:00",
-    "notified": false
-  },
-  {
-    "text": "remind me to eat for work",
-    "due_time": "2026-09-17T17:05:11.341116",
-    "notified": true
-  },
-  {
-    "text": "make food for later",
-    "due_time": "2026-09-17T17:05:50.811166",
-    "notified": true
-  }
+  
 ]

@@ -214,5 +214,21 @@
   {
     "role": "assistant",
     "content": "You can browse cookbooks or search for recipes online."
+  },
+  {
+    "role": "user",
+    "content": "Then you open the wetter app"
+  },
+  {
+    "role": "assistant",
+    "content": "I don't have the ability to open apps."
+  },
+  {
+    "role": "user",
+    "content": "app"
+  },
+  {
+    "role": "assistant",
+    "content": "I'm a text-based voice assistant, I don't have the capability to open apps or interact with the desktop."
   }
 ]

@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import requests
 from skills.base_skill import BaseSkill
 from skills.ui_utils import show_notification
+from skills.browser_utils import open_incognito, open_normal
 
 WEATHER_CODES = {
     0: "clear sky", 1: "mostly clear", 2: "partly cloudy", 3: "overcast",
@@ -112,6 +113,7 @@ class WeatherSkill(BaseSkill):
             f"Wind: {self.last_weather['wind']} km/h"
         )
         threading.Thread(target=lambda: show_notification("Weather", popup_text), daemon=True).start()
+        threading.Thread(target=lambda: open_incognito("https://www.meteo.be/en/weather"), daemon=True).start()
 
         return spoken
 
