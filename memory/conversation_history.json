@@ -206,5 +206,13 @@
   {
     "role": "assistant",
     "content": "You can look up a recipe online, just type in the ingredients and instructions."
+  },
+  {
+    "role": "user",
+    "content": "Can you recommend some foods"
+  },
+  {
+    "role": "assistant",
+    "content": "You can browse cookbooks or search for recipes online."
   }
 ]

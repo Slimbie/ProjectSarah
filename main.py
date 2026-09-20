@@ -13,6 +13,7 @@ from skills.reminder_skill import ReminderSkill
 from memory.reminder_checker import ReminderChecker
 from skills.reminder_query_skill import ReminderQuerySkill
 from skills.weather_skill import WeatherSkill
+from skills.recipe_skill import RecipeSkill
 
 
 
@@ -32,9 +33,11 @@ def main():
     ReminderQuerySkill(),
     ReminderSkill(),
     WeatherSkill(),
+    RecipeSkill(),
     SearchSkill(),
     LlmSkill(),
     ])
+
 
     print("Sarah is actief en luistert op de achtergrond... (Ctrl+C om te stoppen)")
 
