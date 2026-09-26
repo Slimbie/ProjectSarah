@@ -16,6 +16,7 @@ from skills.random_skill import RandomSkill
 from skills.search_skill import SearchSkill
 from skills.llm_skill import LlmSkill
 from memory.reminder_checker import ReminderChecker
+from skills.news_skill import NewsSkill
 
 
 def main():
@@ -27,19 +28,20 @@ def main():
     reminder_checker.start()
 
     orchestrator = Orchestrator(skills=[
-        TimeSkill(),
-        AppSkill(),
-        MediaSkill(),
-        TimerSkill(speaker),
-        AlarmSkill(speaker),
-        ReminderQuerySkill(),
-        ReminderSkill(),
-        WeatherSkill(),
-        RecipeSkill(),
-        SystemSkill(),
-        RandomSkill(),
-        SearchSkill(),
-        LlmSkill(),
+    TimeSkill(),
+    AppSkill(),
+    MediaSkill(),
+    TimerSkill(speaker),
+    AlarmSkill(speaker),
+    ReminderQuerySkill(),
+    ReminderSkill(),
+    WeatherSkill(),
+    RecipeSkill(),
+    NewsSkill(default_topic="top"),
+    SystemSkill(),
+    RandomSkill(),
+    SearchSkill(),
+    LlmSkill(),
     ])
 
     print("Sarah is actief en luistert op de achtergrond... (Ctrl+C om te stoppen)")

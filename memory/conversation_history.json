@@ -286,5 +286,53 @@
   {
     "role": "assistant",
     "content": "I can show you the list of available Wi-Fi networks."
+  },
+  {
+    "role": "user",
+    "content": "Something with me it's"
+  },
+  {
+    "role": "assistant",
+    "content": "I don't have any information about your location."
+  },
+  {
+    "role": "user",
+    "content": "Mix again"
+  },
+  {
+    "role": "assistant",
+    "content": "Sonny, I can generate a random musical mix."
+  },
+  {
+    "role": "user",
+    "content": "Can you give me the recipe"
+  },
+  {
+    "role": "assistant",
+    "content": "I can provide you with a recipe. Would you like me to tell you about something in particular?"
+  },
+  {
+    "role": "user",
+    "content": "a screen down"
+  },
+  {
+    "role": "assistant",
+    "content": "I can display the menu options on the screen."
+  },
+  {
+    "role": "user",
+    "content": "Peddery saver"
+  },
+  {
+    "role": "assistant",
+    "content": "I can switch to a simple text-based menu."
+  },
+  {
+    "role": "user",
+    "content": "Dark style"
+  },
+  {
+    "role": "assistant",
+    "content": "I can display the Dark theme."
   }
 ]
